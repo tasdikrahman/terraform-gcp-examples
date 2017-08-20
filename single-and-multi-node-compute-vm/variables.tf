@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "instance-name" {
-  default = "ovirt-engine"
+  default = "engine-ovirt"
 }
 
 variable "project-name" {

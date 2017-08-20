@@ -1,7 +1,14 @@
 resource "google_compute_instance" "instance" {
-  name         = "${var.instance-name}"
+  name = "${var.instance-name}"
+
+  ## for a setup having multiple instances of the same type, you can do
+  ## the following, there would be 2 instances of the same configuration
+  ## provisioned
+  # count        = 2
+  # name         = "${var.instance-name}-${count.index}"
   machine_type = "${var.vm_type["1point7gig"]}"
-  zone         = "${var.region}"
+
+  zone = "${var.region}"
 
   tags = [
     "${var.network}-firewall-ssh",

@@ -2,6 +2,27 @@
 
 This demonstrates the provisioning of a single compute VM(`g1-small`) with centos7 (these can be changed inside the `variables.tf` file) in GCP inside a custom created VPC with firewall rules attached to it.
 
+**NOTE**
+
+You can create multiple instances of the same type by modifying you `main.tf` like
+
+```hcl
+...
+...
+name = "${var.instance-name}"
+
+## for a setup having multiple instances of the same type, you can do
+## the following, there would be 2 instances of the same configuration
+## provisioned
+# count        = 2
+# name         = "${var.instance-name}-${count.index}"
+machine_type = "${var.vm_type["1point7gig"]}"
+
+zone = "${var.region}"
+...
+...
+```
+
 ## Running it
 
 ```bash

@@ -3,7 +3,7 @@
 ## Modules
 
 - [GCS bucket](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/gcs-bucket/)
-- [single-node-compute-vm](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/single-node-compute-vm)
+- [single-node-compute-vm](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/single-and-multi-node-compute-vm)
 
 ### Setup
 
