@@ -2,6 +2,10 @@ variable "region" {
   default = "us-west1-a" # Oregon
 }
 
+variable "instance-name" {
+  default = "ovirt-engine"
+}
+
 variable "project-name" {
   default = "gsoc-172407"
 }

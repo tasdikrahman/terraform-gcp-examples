@@ -1,5 +1,5 @@
-resource "google_compute_instance" "ovirt-generic" {
-  name         = "ovirt-generic"
+resource "google_compute_instance" "instance" {
+  name         = "${var.instance-name}"
   machine_type = "${var.vm_type["1point7gig"]}"
   zone         = "${var.region}"
 
@@ -11,7 +11,7 @@ resource "google_compute_instance" "ovirt-generic" {
   ]
 
   disk {
-    image = "centos-cloud/centos-7"
+    image = "${var.os["centos7"]}"
   }
 
   network_interface {
