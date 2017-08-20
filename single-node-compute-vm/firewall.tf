@@ -48,3 +48,16 @@ resource "google_compute_firewall" "icmp" {
   target_tags   = ["${var.network}-firewall-icmp"]
   source_ranges = ["0.0.0.0/0"]
 }
+
+resource "google_compute_firewall" "postgresql" {
+  name    = "${var.network}-firewall-postgresql"
+  network = "${google_compute_network.ovirt_network.name}"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["5432"]
+  }
+
+  target_tags   = ["${var.network}-firewall-postgresql"]
+  source_ranges = ["0.0.0.0/0"]
+}

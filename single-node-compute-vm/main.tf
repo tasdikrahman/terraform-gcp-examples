@@ -8,6 +8,7 @@ resource "google_compute_instance" "instance" {
     "${var.network}-firewall-http",
     "${var.network}-firewall-https",
     "${var.network}-firewall-icmp",
+    "${var.network}-firewall-postgresql",
   ]
 
   disk {
