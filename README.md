@@ -2,8 +2,8 @@
 
 ## Modules
 
-- [GCS bucket](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/gcs-bucket/README.md)
-- [single-node-compute-vm](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/single-node-compute-vm/README.md)
+- [GCS bucket](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/gcs-bucket/)
+- [single-node-compute-vm](https://github.com/tasdikrahman/terraform-gcp-examples/tree/master/single-node-compute-vm)
 
 ### Setup
 
