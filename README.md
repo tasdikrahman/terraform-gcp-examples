@@ -17,6 +17,8 @@ You can get it under
 
 For the Key type field chose JSON. Put the downloaded file right were your Terraform config file is and name it `account.json`.
 
+If you are using the gcs as the backend, you will need to give it the `Storage Admin` role for the `storage.buckets.create` permission.
+
 ## LICENSE
 
 MIT Licensed
