@@ -61,3 +61,29 @@ resource "google_compute_firewall" "postgresql" {
   target_tags   = ["${var.network}-firewall-postgresql"]
   source_ranges = ["0.0.0.0/0"]
 }
+
+resource "google_compute_firewall" "firewall-openshift-console" {
+  name    = "${var.network}-firewall-openshift-console"
+  network = "${google_compute_network.ovirt_network.name}"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["8443"]
+  }
+
+  target_tags   = ["${var.network}-firewall-openshift-console"]
+  source_ranges = ["0.0.0.0/0"]
+}
+
+resource "google_compute_firewall" "firewall-secure-forward" {
+  name    = "${var.network}-firewall-secure-forward"
+  network = "${google_compute_network.ovirt_network.name}"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["24284"]
+  }
+
+  target_tags   = ["${var.network}-firewall-secure-forward"]
+  source_ranges = ["0.0.0.0/0"]
+}

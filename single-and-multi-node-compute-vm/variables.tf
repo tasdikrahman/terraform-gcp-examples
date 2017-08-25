@@ -2,10 +2,6 @@ variable "region" {
   default = "us-west1-a" # Oregon
 }
 
-variable "instance-name" {
-  default = "engine-ovirt"
-}
-
 variable "project-name" {
   default = "gsoc-172407"
 }
@@ -22,6 +18,7 @@ variable "vm_type" {
   default {
     "512gig"     = "f1-micro"
     "1point7gig" = "g1-small"
+    "7point5gig" = "n1-standard-2"
   }
 }
 
