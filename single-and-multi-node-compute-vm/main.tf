@@ -24,6 +24,10 @@ resource "google_compute_instance" "ovirt-engine-instance" {
     image = "${var.os["centos7"]}"
   }
 
+  metadata {
+    hostname = "engine.ovirt.org"
+  }
+
   network_interface {
     subnetwork = "${google_compute_subnetwork.ovirt_network_subnetwork.name}"
 
@@ -57,6 +61,11 @@ resource "google_compute_instance" "metrics-store-instance" {
 
   disk {
     image = "${var.os["centos7"]}"
+    size  = 20
+  }
+
+  metadata {
+    hostname = "metrics.ovirt.org"
   }
 
   network_interface {
