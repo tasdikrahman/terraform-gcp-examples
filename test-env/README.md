@@ -4,10 +4,13 @@ This environment contains a separate VPC created from `test-vpc` with some defau
 
 ## Order of execution
 
-`terraform plan`
-`terraform apply`
+```
+$ terraform plan
+$ terraform apply
+```
 
 inside 
 
 1. `test-vpc`
+
 2. `test-gcp-instance`

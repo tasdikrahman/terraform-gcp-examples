@@ -1,5 +1,5 @@
 module "firewall-ssh" {
-  source        = "github.com/tasdikrahman/tf-module-gcp-network-firewall"
+  source        = "github.com/tasdikrahman/terraform-gcp-network-firewall"
   name          = "ssh"
   network       = "${data.google_compute_network.test-vpc.name}"
   protocol      = "tcp"
@@ -8,7 +8,7 @@ module "firewall-ssh" {
 }
 
 module "firewall-http" {
-  source        = "github.com/tasdikrahman/tf-module-gcp-network-firewall"
+  source        = "github.com/tasdikrahman/terraform-gcp-network-firewall"
   name          = "http"
   network       = "${data.google_compute_network.test-vpc.name}"
   protocol      = "tcp"
@@ -17,7 +17,7 @@ module "firewall-http" {
 }
 
 module "firewall-https" {
-  source        = "github.com/tasdikrahman/tf-module-gcp-network-firewall"
+  source        = "github.com/tasdikrahman/terraform-gcp-network-firewall"
   name          = "https"
   network       = "${data.google_compute_network.test-vpc.name}"
   protocol      = "tcp"
